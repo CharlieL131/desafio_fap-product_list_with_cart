@@ -1,51 +1,25 @@
 /* PALETA DE CORES */
 :root {
-    --wh: #ffffff;
-    --blu: #1ba0f6;
-    --red: #ff3141;
-    --bl: #000000;
-    --gr: #b6b6b6;
-
-    --gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    --font-color-primary: #382d20;
+    --font-color-secondary: #a29e97;
+    --font-color-tertiary: #6c6865;
+    --button-color-primary: #c83b0e;
+    --button-color-secondary: #952c0c;
+    --background-color: #fcf8f5;
+    --white: #FFF;
+    --white-off: #DDD;
+    
 }
 
-/* PALETA SEMANTICA */
-:root {
-    --text-color: var(--bl);
-    --caption-color: var(--gr);
-    --heaader-color: var(--bl);
-    --div-color: var(--gr);
-    --back-color: var(--wh);
-    --butt-color: var(--red);
-    --unfo-color: var(--red);
-    --like-color: var(--red);
-    --notif-color: var(--red);
-    --fol-color: var(--blu);
-    --ver-color: var(--blu);
+@font-face {
+    font-family: RedHatText;
+    src: url("./assets/fonts/RedHatText-VariableFont_wght.ttf");
 }
-
-/* 
-@media(prefers-color-scheme: dark) {
-    :root {
-        --text-color: var(--wh);
-        --caption-color: var(--gr);
-        --heaader-color: var(--wh);
-        --div-color: var(--gr);
-        --back-color: var(--bl);
-        --butt-color: var(--red);
-        --unfo-color: var(--red);
-        --like-color: var(--red);
-        --notif-color: var(--red);
-        --fol-color: var(--blu);
-        --ver-color: var(--blu);
-    }
-}
-*/
 
 body {
-    font-family: proxima-nova, sans-serif;
+    font-family: RedHatText;
     font-style: normal;
-    font-weight: 100;
-    color: var(--text-color);
-    background-color: var(--back-color);
+    font-weight: 400;
+    color: var(--font-color-primary);
+    background-color: var(--background-color);
 }
