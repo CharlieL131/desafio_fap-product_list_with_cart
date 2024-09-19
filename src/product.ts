@@ -5,6 +5,7 @@ export interface ProductImageSource {
     desktop: string;
 }
 export interface ProductData {
+    id: string;
     imageSrc: ProductImageSource;
     category: string;
     name: string;
@@ -21,6 +22,7 @@ export class ProductComponent {
         this.container = document.querySelector(selector) as HTMLElement;
         this.element = document.createElement("div");
         this.element.classList.add("product");
+        this.element.setAttribute('id', data.id)
         this.data = data;
         this.render();
         this.container.appendChild(this.element);

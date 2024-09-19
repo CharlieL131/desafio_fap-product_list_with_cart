@@ -5,8 +5,11 @@ async function loadProducts(): Promise<ProductData[]> {
   const response = await fetch('../data.json');
   const data = await response.json();
 
+  let count = 0
   const products: ProductData[] = data.map((item: any) => {
+    count += 1;
     return {
+      id: `product-${count}`,
       imageSrc: {
         thumbnail: item.image.thumbnail,
         mobile: item.image.mobile,
