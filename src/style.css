@@ -1,5 +1,22 @@
 @import './base.css';
 
+main {
+  padding: 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#product-section {
+  display: flex;
+  flex-direction: column;
+}
+
+#product-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .product{
   width: 250px;
   height:350px;
@@ -34,9 +51,7 @@
   place-content: center;
   place-items: center;
   gap: 10px;
-  width: 160px;
-  height: 42px;
-  border-radius: 21px;
+
   font-family: RedHatText;
   font-style: normal;
   font-weight: 700;
@@ -44,10 +59,33 @@
   transition: all 0.1s linear
 }
 
+.quantity-controller {
+  place-content: space-between;
+  background-color: var(--button-color-primary);
+  color: var(--white);
+  border: solid 1px var(--button-color-secondary);
+  width: 160px;
+  height: 42px;
+  border-radius: 21px;
+}
+
+.ico-butt {
+  width: 16px;
+  height: 16px;
+  padding: 1px;
+  background: transparent;
+  border: solid 2px var(--white);
+  border-radius: 50%;
+  margin: 0 20px;
+}
+
 .cart-butt {
   background-color: var(--white);
   color: var(--font-color-primary);
   border: solid 1px var(--font-color-tertiary);
+  width: 160px;
+  height: 42px;
+  border-radius: 21px;
 }
 
 .cart-butt:hover {
@@ -69,14 +107,14 @@
   font-family: RedHatText;
 }
 
-.data .name {
+.data .category {
   color: var(--font-color-secondary);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
 }
 
-.data .desc {
+.data .name {
   color: var(--font-color-primary);
   font-style: normal;
   font-weight: 700;
