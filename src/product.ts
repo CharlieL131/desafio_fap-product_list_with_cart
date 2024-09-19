@@ -48,7 +48,7 @@ export class ProductComponent {
         <div class="data">
           <span class="category">${category}</span>
           <span class="name">${name}</span>
-          <span class="price">${price}</span>
+          <span class="price">\$${price.toFixed(2)}</span>
         </div>
         `;
         
