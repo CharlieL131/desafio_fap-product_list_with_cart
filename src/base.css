@@ -8,6 +8,7 @@
     --background-color: #fcf8f5;
     --white: #FFF;
     --white-off: #DDD;
+    --remove-item-color: #CAAFA7;
     
 }
 
@@ -22,4 +23,5 @@ body {
     font-weight: 400;
     color: var(--font-color-primary);
     background-color: var(--background-color);
+    height: 150%;
 }

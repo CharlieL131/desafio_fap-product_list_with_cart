@@ -1,5 +1,6 @@
 import './style.css'
 import { ProductComponent, ProductData } from './product.ts';
+import { CartComponent } from './cart.ts';
 
 async function loadProducts(): Promise<ProductData[]> {
   const response = await fetch('../data.json');
@@ -26,6 +27,15 @@ async function loadProducts(): Promise<ProductData[]> {
 
   return products;
 }
+const body = document.getElementsByTagName('body')[0] as HTMLElement; 
+let cart = new CartComponent('#cart-section');
+cart.getElement().addEventListener('modalOpened', () => { 
+  body.classList.add('no-scroll')
+})
+
+cart.getElement().addEventListener('modalClosed', () => {
+  body.classList.remove('no-scroll')
+})
 
 async function renderProducts(): Promise<ProductComponent[]> {
   const products = await loadProducts();
@@ -33,10 +43,12 @@ async function renderProducts(): Promise<ProductComponent[]> {
 
   products.forEach(product => {
     productElements.push(new ProductComponent("#product-container", product));
+    cart.listenForProductQuantityChange(productElements[productElements.length-1])
   });
 
   return productElements;
 }
 
 let productElements = renderProducts();
+
 
