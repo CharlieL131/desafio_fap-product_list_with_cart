@@ -28,7 +28,7 @@ async function loadProducts(): Promise<ProductData[]> {
   return products;
 }
 
-let cart = new CartComponent('.cart');
+let cart = new CartComponent('#cart-section');
 
 async function renderProducts(): Promise<ProductComponent[]> {
   const products = await loadProducts();

@@ -66,8 +66,10 @@ export class CartComponent {
     removeCartItem(cartItem: CartItemComponent) {
         const productId = cartItem.getProductComponent().getId();
         
+        
         if (this.cartItems.has(productId)) {
-            cartItem.getElement().remove();
+            console.log(`Item Deleted: ${productId}`);
+            this.cartItems.get(productId)?.getElement().remove();
 
             this.cartItems.delete(productId);
 
