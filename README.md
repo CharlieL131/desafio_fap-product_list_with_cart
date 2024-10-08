@@ -37,14 +37,6 @@ Para executar o projeto localmente, siga estas etapas:
 3. Inicie o servidor de desenvolvimento com `npm run dev`.
 4. Acesse o projeto no navegador através do endereço indicado pelo Vite.
 
-## Implantação do Projeto
-
-Você pode hospedar o projeto em plataformas como:
-
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
-
 ## Feedback
 
 Feedbacks são sempre bem-vindos! Caso tenha sugestões ou melhorias, sinta-se à vontade para contribuir com o projeto.
